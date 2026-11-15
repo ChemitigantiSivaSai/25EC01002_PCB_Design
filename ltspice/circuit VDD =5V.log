@@ -1,0 +1,22 @@
+LTspice 26.0.2 for Windows
+Circuit: C:\Users\sivas\OneDrive\Documents\EDA\PCD_CMOS_Inverter\EC2L104_Pre_KiCad_LTspice_Starter\circuit VDD =5V.net
+Start Time: Sun Nov 15 12:00:48 2026
+solver = Normal
+Maximum thread count: 8
+tnom = 27
+temp = 27
+method = trap
+Instance "u2:M2": Length shorter than recommended for a level 1 MOSFET.
+C:\Users\sivas\OneDrive\Documents\EDA\PCD_CMOS_Inverter\EC2L104_Pre_KiCad_LTspice_Starter\circuit VDD =5V.net(8): Missing value, assuming 0V @ DC.
+
+Vin in 0
+^^^^^^^^
+Direct Newton iteration succeeded in finding operating point.
+Total elapsed time: 0.096 seconds.
+
+Files loaded:
+C:\Users\sivas\OneDrive\Documents\EDA\PCD_CMOS_Inverter\EC2L104_Pre_KiCad_LTspice_Starter\circuit VDD =5V.net
+C:\Users\sivas\AppData\Local\LTspice\lib\cmp\standard.dio
+C:\Users\sivas\OneDrive\Documents\EDA\PCD_CMOS_Inverter\EC2L104_Pre_KiCad_LTspice_Starter\2N7000.onsemi.lib
+C:\Users\sivas\OneDrive\Documents\EDA\PCD_CMOS_Inverter\EC2L104_Pre_KiCad_LTspice_Starter\BS250.philips.lib
+

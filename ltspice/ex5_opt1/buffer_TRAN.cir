@@ -1,0 +1,24 @@
+* EC2L104 Exercise 5 option 1 - non-inverting buffer, transient (1 kHz, 0-5 V pulse)
+* Put this file in the SAME folder as 2N7000.onsemi.lib and BS250.philips.lib
+XN1 out1 in   0   2N7000
+XP1 out1 in   vdd BS250
+XN2 out2 out1 0   2N7000
+XP2 out2 out1 vdd BS250
+Vdd vdd 0 5
+* 1 ns edges so the delays are not hidden by a slow input ramp
+Vin in 0 PULSE(0 5 0 1n 1n 0.5m 1m 3)
+R1 out2 n002 1k
+D1 n002 0 LED
+.model LED D(Is=1e-18 N=1.8 Rs=5 Cjo=30p)
+.inc 2N7000.onsemi.lib
+.inc BS250.philips.lib
+.tran 3m
+* Plot V(in), V(out1), V(out2). Output follows the input (non-inverting).
+* Delay of the whole buffer (50 % input to 50 % output)
+.meas TRAN tpLH TRIG V(in)=2.5 RISE=2 TARG V(out2)=2.5 RISE=2
+.meas TRAN tpHL TRIG V(in)=2.5 FALL=2 TARG V(out2)=2.5 FALL=2
+* Delay of stage 1 only, for comparison with the single inverter
+.meas TRAN tpHL1 TRIG V(in)=2.5 RISE=2 TARG V(out1)=2.5 FALL=2
+.meas TRAN tpLH1 TRIG V(in)=2.5 FALL=2 TARG V(out1)=2.5 RISE=2
+.meas TRAN ILED FIND I(D1) AT=0.75m
+.end

@@ -1,0 +1,25 @@
+* EC2L104 Exercise 5 option 1 - non-inverting buffer = two identical inverter stages
+* DC sweep. Put this file in the SAME folder as 2N7000.onsemi.lib and BS250.philips.lib
+* Subcircuit pin order (same as your working circuit.net): drain gate source
+* Stage 1 (input stage): output node out1
+XN1 out1 in   0   2N7000
+XP1 out1 in   vdd BS250
+* Stage 2 (second inverter): gates driven by out1, output node out2
+XN2 out2 out1 0   2N7000
+XP2 out2 out1 vdd BS250
+* Supply and input
+Vdd vdd 0 5
+Vin in 0 0
+* LED branch on the FINAL output (out2)
+R1 out2 n002 1k
+D1 n002 0 LED
+.model LED D(Is=1e-18 N=1.8 Rs=5 Cjo=30p)
+.inc 2N7000.onsemi.lib
+.inc BS250.philips.lib
+.dc Vin 0 5 0.01
+* Plot V(out1) and V(out2) against Vin
+.meas DC VM1 FIND V(in) WHEN V(out1)=2.5 FALL=1
+.meas DC VM2 FIND V(in) WHEN V(out2)=2.5 RISE=1
+.meas DC ILED_vin0 FIND I(D1) AT=0
+.meas DC ILED_vin5 FIND I(D1) AT=5
+.end

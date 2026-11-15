@@ -1,0 +1,6 @@
+*.lck
+~*
+.history/
+fp-info-cache
+*-backups/
+__pycache__/

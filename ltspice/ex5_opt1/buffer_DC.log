@@ -1,0 +1,29 @@
+LTspice 26.0.2 for Windows
+Circuit: C:\Users\sivas\OneDrive\Documents\EDA\PCD_CMOS_Inverter\EC2L104_Pre_KiCad_LTspice_Starter_ex5_opt1\buffer_DC.cir
+Start Time: Sun Nov 15 22:24:36 2026
+solver = Normal
+Maximum thread count: 8
+tnom = 27
+temp = 27
+method = trap
+Instance "xp1:M2": Length shorter than recommended for a level 1 MOSFET.
+Instance "xp2:M2": Length shorter than recommended for a level 1 MOSFET.
+Direct Newton iteration succeeded in finding operating point.
+Direct Newton iteration succeeded in finding operating point.
+Direct Newton iteration succeeded in finding operating point.
+Direct Newton iteration succeeded in finding operating point.
+Direct Newton iteration succeeded in finding operating point.
+Direct Newton iteration succeeded in finding operating point.
+Direct Newton iteration succeeded in finding operating point.
+Direct Newton iteration succeeded in finding operating point.
+Total elapsed time: 0.234 seconds.
+
+Files loaded:
+C:\Users\sivas\OneDrive\Documents\EDA\PCD_CMOS_Inverter\EC2L104_Pre_KiCad_LTspice_Starter_ex5_opt1\buffer_DC.cir
+C:\Users\sivas\OneDrive\Documents\EDA\PCD_CMOS_Inverter\EC2L104_Pre_KiCad_LTspice_Starter_ex5_opt1\2N7000.onsemi.lib
+C:\Users\sivas\OneDrive\Documents\EDA\PCD_CMOS_Inverter\EC2L104_Pre_KiCad_LTspice_Starter_ex5_opt1\BS250.philips.lib
+
+vm1: V(in) =2.41498864835 at 2.41498856727
+vm2: V(in) =2.41504689434 at 2.41504681332
+iled_vin0: I(D1) =1.13969978773e-22 at 0
+iled_vin5: I(D1) =0.00327604915947 at 5
